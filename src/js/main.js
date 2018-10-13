@@ -88,4 +88,18 @@
       150
     ))
   }
+
+  function sendData() {
+    var XHR = new XMLHttpRequest();
+    var FD = new FormData(form);
+    XHR.open('POST', '#');
+    XHR.send(FD);
+  }
+
+  var form = document.querySelectorAll('.info-form')[0];
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    sendData();
+  });
+
 }())
