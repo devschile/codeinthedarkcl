@@ -103,3 +103,37 @@
   });
 
 }())
+
+function fullSlide () {
+
+  var counter = 0
+  var items = document.querySelectorAll('.diy-slideshow figure')
+  var numItems = items.length
+  console.log('i: ' + items)
+
+  var showCurrent = function (){
+    var itemToShow = Math.abs(counter%numItems)
+
+    // [].forEach.call( items, function(el){
+    for (var i = 0;  i < items.length; i++) {
+      items[i].classList.remove('show')
+    }
+    // })
+
+    items[itemToShow].classList.add('show')
+  };
+
+  // add click events to prev & next buttons
+  document.querySelector('.next').addEventListener('click', function () {
+     counter++
+     showCurrent()
+  }, false)
+
+  document.querySelector('.prev').addEventListener('click', function () {
+     counter--
+     showCurrent()
+  }, false)
+
+}
+
+fullSlide()
