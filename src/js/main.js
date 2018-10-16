@@ -98,14 +98,14 @@
     var XHR = new XMLHttpRequest()
     var FD = new FormData(form)
 
-    XHR.addEventListener('load', function(event) {
+    // XHR.addEventListener('load', function(event) {
       button.setAttribute('disabled', 'disabled')
       input.setAttribute('disabled', 'disabled')
-    })
+    // })
 
     XHR.open('POST', '#')
     XHR.send(FD)
-
+    console.log(XHR.status)
     if (XHR.status == 200) {
       success.setAttribute('display', 'block')
     } else {
