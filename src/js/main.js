@@ -90,17 +90,42 @@
   }
 
   function sendData() {
-    var XHR = new XMLHttpRequest();
-    var FD = new FormData(form);
-    XHR.open('POST', '#');
-    XHR.send(FD);
+    var button = document.querySelector('#submitFormButton')
+    var input = document.querySelector('#email')
+    var success = document.querySelector('#formSent')
+    var error = document.querySelector('#formError')
+
+    var XHR = new XMLHttpRequest()
+    var FD = new FormData(form)
+
+    XHR.open('POST', '#')
+
+    XHR.onloadstart = function () {
+      button.setAttribute('disabled', 'disabled')
+      input.setAttribute('disabled', 'disabled')
+    }
+
+    XHR.onreadystatechange = function () {
+      if (XHR.readyState < 4) {
+      } else if (XHR.readyState === 4) {
+        if (XHR.status === 200) {
+          success.setAttribute('style', 'display:block')
+        } else if (XHR.status !== 200) {
+          error.setAttribute('style', 'display:block')
+          button.removeAttribute('disabled')
+          input.removeAttribute('disabled')
+        }
+      }
+    }
+
+    XHR.send(FD)
   }
 
   var form = document.querySelectorAll('.info-form')[0];
   form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    sendData();
-  });
+    e.preventDefault()
+    sendData()
+  })
 
 }())
 
@@ -109,7 +134,6 @@ function fullSlide () {
   var counter = 0
   var items = document.querySelectorAll('.diy-slideshow figure')
   var numItems = items.length
-  console.log('i: ' + items)
 
   var showCurrent = function (){
     var itemToShow = Math.abs(counter%numItems)
@@ -121,7 +145,7 @@ function fullSlide () {
     // })
 
     items[itemToShow].classList.add('show')
-  };
+  }
 
   // add click events to prev & next buttons
   document.querySelector('.next').addEventListener('click', function () {
