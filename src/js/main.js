@@ -98,11 +98,6 @@
     var XHR = new XMLHttpRequest()
     var FD = new FormData(form)
 
-    // XHR.addEventListener('load', function(event) {
-    //   button.setAttribute('disabled', 'disabled')
-    //   input.setAttribute('disabled', 'disabled')
-    // })
-
     XHR.open('POST', '#')
 
     XHR.onloadstart = function () {
@@ -114,10 +109,8 @@
       if (XHR.readyState < 4) {
       } else if (XHR.readyState === 4) {
         if (XHR.status === 200) {
-          console.log('success')
           success.setAttribute('style', 'display:block')
-        } else if (XHR.status !==200) {
-          console.log('failed')
+        } else if (XHR.status !== 200) {
           error.setAttribute('style', 'display:block')
           button.removeAttribute('disabled')
           input.removeAttribute('disabled')
@@ -126,14 +119,6 @@
     }
 
     XHR.send(FD)
-
-    // if (XHR.status == 200) {
-    //   success.setAttribute('display', 'block')
-    // } else {
-    //   error.setAttribute('display', 'block')
-    //   button.removeAttribute('disabled')
-    //   input.removeAttribute('disabled')
-    // }
   }
 
   var form = document.querySelectorAll('.info-form')[0];
