@@ -138,11 +138,9 @@ function fullSlide () {
   var showCurrent = function (){
     var itemToShow = Math.abs(counter%numItems)
 
-    // [].forEach.call( items, function(el){
     for (var i = 0;  i < items.length; i++) {
       items[i].classList.remove('show')
     }
-    // })
 
     items[itemToShow].classList.add('show')
   }
