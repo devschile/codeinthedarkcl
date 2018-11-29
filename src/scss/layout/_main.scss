@@ -79,3 +79,8 @@ main {
 .inline-block {
     display: inline-block;
 }
+
+button[disabled] {
+    cursor: default;
+    opacity: .4;
+}
