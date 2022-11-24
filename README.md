@@ -3,9 +3,9 @@
 _Based in Florence from [cruip](https://cruip.com/)_
 
 ## How to:
-* `$ npm install` or `$ yarn`
+* `$ yarn install`
 
-To watch:
+## To watch:
 
 * `$ yarn run watch`
 
