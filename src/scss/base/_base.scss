@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	background: color(bg, 1); /* Fallback for when there is no custom background color defined. */
+	background: color(bg, 2); /* Fallback for when there is no custom background color defined. */
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 }
@@ -46,7 +46,7 @@ dl {
 }
 
 dt {
-	@include font-weight(bold);
+	@include font-weight(semibold);
 }
 
 dd {
@@ -74,6 +74,7 @@ svg {
 	display: block;
 }
 
+// tables
 table {
 	border-collapse: collapse;
 	margin-bottom: 24px;

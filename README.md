@@ -1,16 +1,16 @@
 # Code in the Dark base template
 
-_Based in Florence from [cruip](https://cruip.com/)_
+_Based in Solid from [cruip](https://cruip.com/)_
 
 ## How to:
-* `$ yarn install`
+* `$ npm install`
 
 ## To watch:
 
-* `$ yarn run watch`
+* `$ npm run watch`
 
 To build:
 
-* `$ yarn run build`
+* `$ npm run build`
 
 More info see package.json

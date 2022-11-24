@@ -112,7 +112,7 @@ h6,
 
 	h1, h2, h3, h4, h5, h6,
 	.h1, .h2, .h3, .h4, .h5, .h6 {
-		color: color(typography, 1) !important;
+		color: color(typography, 1i) !important;
 	}
 }
 
@@ -240,7 +240,7 @@ small {
 
 b,
 strong {
-	@include font-weight(bold);
+	@include font-weight(semibold);
 }
 
 button,
@@ -249,8 +249,4 @@ select,
 textarea,
 label {
 	@include font-size(5, mobile, true, true);
-}
-
-.legend {
-	margin: 1rem;
 }

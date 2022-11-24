@@ -1,26 +1,24 @@
 .features-wrap {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-right: -12px;
-    margin-left: -12px;
+    justify-content: space-evenly;
+    margin-right: -32px;
+    margin-left: -32px;
 
-    &:first-child {
-        margin-top: -8px;
+    &:first-of-type {
+        margin-top: -16px;
     }
 
-    &:last-child {
-        margin-bottom: -8px;
+    &:last-of-type {
+        margin-bottom: -16px;
     }
 }
 
 .feature {
-    padding: 8px 12px;
-    width: 344px;
-    max-width: 344px;
+    padding: 16px 32px;
+    width: 380px;
+    max-width: 380px;
     flex-grow: 1;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .feature-inner {
@@ -28,7 +26,7 @@
 }
 
 .feature-icon {
-    display: flex;
+	display: flex;
     justify-content: center;
 }
 
@@ -36,16 +34,16 @@
 
     .features-wrap {
 
-        &:first-child {
-            margin-top: -32px;
+        &:first-of-type {
+            margin-top: -24px;
         }
 
-        &:last-child {
-            margin-bottom: -32px;
+        &:last-of-type {
+            margin-bottom: -24px;
         }
     }
 
     .feature {
-        padding: 32px 12px;
+        padding: 32px 32px;
     }
 }

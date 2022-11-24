@@ -29,7 +29,7 @@
 // Anchor aspect
 @mixin anchor-aspect($type: 'main') {
 	@if ($type == 'main') { // Base
-		color: inherit;
+		color: color(typography, 2);
 		text-decoration: underline;
 
 		&:hover,
@@ -44,7 +44,6 @@
 
 		&:hover,
 		&:active {
-			color: color(typography, 1);
 		}
 	} @else if ($type == 'footer') {
 		color: color(typography, 2);
@@ -52,21 +51,25 @@
 
 		&:hover,
 		&:active {
-			color: color(typography, 1);
 			text-decoration: underline;
 		}
 	}
 }
 
 @mixin shadow {
-	box-shadow: 0 16px 48px rgba(color(bg, 1), .5);
+	box-shadow: 0 24px 48px rgba(color(bg, 1), .24);
+	mix-blend-mode: multiply;
+}
+
+@mixin shadow-sm {
+	box-shadow: 0 16px 24px rgba(color(bg, 1), .24);
+	mix-blend-mode: multiply;
 }
 
 @mixin divider-mix {
 	display: block;
 	height: 1px;
 	background: color(bg, 3);
-	background: linear-gradient(to right, rgba(color(bg, 3), .24) 0, rgba(color(bg, 3), 1) 50%, rgba(color(bg, 3), .24) 100%);
 }
 
 @mixin divider($type: false) {
