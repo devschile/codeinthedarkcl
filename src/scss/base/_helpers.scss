@@ -52,12 +52,12 @@
 	    line-height: 16px;
 	    text-decoration: none;
 		text-transform: uppercase;
-	    background-color: color(bg, 2);
+	    background-color: color(bg, 1);
 	    color: color(primary, 1) !important;
 	    border: none;
 		height: auto;
 		left: 8px;
-		padding: 16px 32px;
+		padding: 16px 40px;
 		top: 8px;
 		width: auto;
 		z-index: 100000;
@@ -83,6 +83,10 @@
 
 .text-primary {
     color: color(primary, 1);
+}
+
+.text-secondary {
+    color: color(secondary, 1);
 }
 
 .has-top-divider {
@@ -460,17 +464,6 @@
 
 		.is-revealing {
 			visibility: hidden;
-		}
-	}
-}
-
-.has-animations {
-
-	.anime-element {
-		visibility: hidden;
-
-		.anime-ready & {
-			visibility: visible;
 		}
 	}
 }

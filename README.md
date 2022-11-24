@@ -1,6 +1,6 @@
 # Code in the Dark base template
 
-_Based in Solid from [cruip](https://cruip.com/)_
+_Based in Venus from [cruip](https://cruip.com/)_
 
 ## How to:
 * `$ npm install`
