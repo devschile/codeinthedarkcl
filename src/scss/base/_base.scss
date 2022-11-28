@@ -46,7 +46,7 @@ dl {
 }
 
 dt {
-	@include font-weight(bold);
+	@include font-weight(semibold);
 }
 
 dd {
@@ -69,11 +69,12 @@ figcaption {
 	padding: 8px 0;
 }
 
-img,
-svg {
-	display: block;
-}
+// img,
+// svg {
+// 	display: block;
+// }
 
+// tables
 table {
 	border-collapse: collapse;
 	margin-bottom: 24px;

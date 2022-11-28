@@ -1,6 +1,10 @@
 .site-header {
-    position: relative;
     padding: 24px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1;
 }
 
 .site-header-inner {
@@ -24,7 +28,7 @@
                 @include font-size(7, desktop, true, true, true);
             }
         }
-        @include font-weight(bold);
+        @include font-weight(semibold);
         @include anchor-aspect(header);
         line-height: 16px;
         padding: 8px 24px;

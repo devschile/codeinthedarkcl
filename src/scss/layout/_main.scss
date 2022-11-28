@@ -1,5 +1,5 @@
 .is-boxed {
-    background: lighten(color(bg, 1), 8%);
+    background: color(bg, 1);
 }
 
 .body-wrap {
@@ -12,7 +12,9 @@
 }
 
 .boxed-container {
+    max-width: 1440px;
     margin: 0 auto;
+    @include shadow;
 }
 
 main {
@@ -28,57 +30,41 @@ main {
 @include media( '>medium' ) {
 
     .section-inner {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 88px;
+        padding-bottom: 88px;
     }
 }
 
-.input-email {
-    padding: 6px;
+.larger {
+    margin-bottom: 24px;
+    text-align: center;
+
+    > span {
+        display: inline-block;
+        font-size: 24px;
+        color: #59cb8f;
+        text-shadow: 0 0 5px #59cb8f;
+        line-height: 1;
+        animation: rotation 3s linear infinite;
+    }
 }
 
-.input-email:disabled {
-    color: #ccc;
+@keyframes rotation {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-.button-submit:disabled {
-    background: #ccc;
-    cursor: wait;
+.relative {
+    position: relative;
+    z-index: 9;
 }
 
-.legend {
-    display: none;
+.video {
+    width: 100%;
 }
 
-.small-title {
-    margin-top: 12px;
-    font-size: 16px;
-    line-height: 18px;
-}
-
-.sponsors-wrap {
-    align-items: center;
-    justify-content: center;
-}
-.sponsor img {
-    margin: 0 auto;
-}
-
-.twitter {
-    margin-left: 20px;
-    display: inline-block;
-}
-
-.rounded {
-    border-radius: 50%;
-    border: 3px solid #666;
-}
-
-.inline-block {
-    display: inline-block;
-}
-
-button[disabled] {
-    cursor: default;
-    opacity: .4;
+.invited {
+    margin-bottom: 68px;
+    color: #333;
 }
